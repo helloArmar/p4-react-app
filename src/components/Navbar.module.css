@@ -1,0 +1,128 @@
+/* ── Navbar ── */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.logo {
+  background: #2563eb;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4px;
+}
+
+.navActive {
+  padding: 6px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1e293b;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navLink {
+  padding: 6px 14px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #64748b;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navLink:hover {
+  color: #1e293b;
+}
+
+/* Show full label on desktop, hide short */
+.navFull  { display: inline; }
+.navShort { display: none; }
+
+/* Hamburger — hidden on desktop & tablet */
+.hamburger {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #1e293b;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+/* ── Mobile Drawer ── */
+.drawer {
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 57px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.drawerLink {
+  padding: 13px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #374151;
+  display: block;
+}
+
+.drawerLink:hover {
+  background: #f8fafc;
+}
+
+.drawerActive {
+  padding: 13px 20px;
+  background: #f1f5f9;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  display: block;
+}
+
+/* ══════════════════════════════════
+   TABLET  (max-width: 1024px)
+══════════════════════════════════ */
+@media (max-width: 1024px) {
+  .navFull  { display: none; }
+  .navShort { display: inline; }
+}
+
+/* ══════════════════════════════════
+   MOBILE  (max-width: 640px)
+══════════════════════════════════ */
+@media (max-width: 640px) {
+  .navList   { display: none; }
+  .hamburger { display: block; }
+}

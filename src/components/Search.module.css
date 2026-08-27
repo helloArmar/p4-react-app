@@ -1,0 +1,303 @@
+/* ── Layout ── */
+.wrapper {
+  min-height: 100vh;
+  background: #f1f5f9;
+  font-family: system-ui, 'Segoe UI', sans-serif;
+}
+
+/* ── Main ── */
+.main {
+  padding: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.pageTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 20px;
+}
+
+/* ── Search Box ── */
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px 14px;
+  gap: 10px;
+  margin-bottom: 20px;
+  transition: border-color 0.15s;
+}
+
+.searchBox:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.searchIcon {
+  font-size: 16px;
+  flex-shrink: 0;
+  color: #94a3b8;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #1e293b;
+  background: transparent;
+}
+
+.searchInput::placeholder {
+  color: #94a3b8;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.clearBtn:hover {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.searchBtn {
+  flex-shrink: 0;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.searchBtn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.searchBtn:disabled {
+  background: #cbd5e1;
+  cursor: default;
+}
+
+/* ── Hint ── */
+.hint {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  padding: 16px 0;
+}
+
+/* ── Loading ── */
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #64748b;
+  padding: 16px 0;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e2e8f0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Note ── */
+.note {
+  font-size: 12px;
+  color: #94a3b8;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* ── Empty State ── */
+.empty {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.emptyTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 6px;
+}
+
+.emptySubtitle {
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* ── Result Count ── */
+.resultCount {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0 0 12px;
+}
+
+/* ── Stock List ── */
+.stockList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stockRow {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.stockRow:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stockLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tickerBadge {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #475569;
+  min-width: 40px;
+  text-align: center;
+}
+
+.stockInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stockTicker {
+  font-weight: 700;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.stockName {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.stockRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stockPrice {
+  font-weight: 600;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.badgeGreen {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.badgeRed {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ── Add / View Buttons ── */
+.addBtn,
+.viewBtn {
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  background: #fff;
+  border: 1.5px solid #2563eb;
+  color: #2563eb;
+  transition: background 0.15s;
+}
+
+.addBtn:hover:not(:disabled),
+.viewBtn:hover {
+  background: #eff6ff;
+}
+
+.addBtn:disabled {
+  border-color: #cbd5e1;
+  color: #94a3b8;
+  cursor: default;
+}
+
+/* ══════════════════════════════════
+   TABLET  (max-width: 1024px)
+══════════════════════════════════ */
+@media (max-width: 1024px) {
+  .stockPrice { display: none; }
+}
+
+/* ══════════════════════════════════
+   MOBILE  (max-width: 640px)
+══════════════════════════════════ */
+@media (max-width: 640px) {
+  .main { padding: 16px; }
+
+  .stockName { display: none; }
+
+  .stockRow {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .stockRight {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,204 @@
+/* ── Layout ── */
+.wrapper {
+  min-height: 100vh;
+  background: #f1f5f9;
+  font-family: system-ui, 'Segoe UI', sans-serif;
+}
+
+/* ── Main ── */
+.main {
+  padding: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 14px;
+}
+
+/* ── Stats Grid — 4 columns on desktop ── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.statCard {
+  background: #fff;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* Short label — hidden on desktop */
+.labelFull  { display: inline; }
+.labelShort { display: none; }
+
+.statValue {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.1;
+}
+
+.green { color: #16a34a; }
+.red   { color: #dc2626; }
+
+/* Best performer card */
+.bestValue {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bestTicker {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.bestChange {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ── Stock List ── */
+.stockList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.stockRow {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.stockRow:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stockLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tickerBadge {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #475569;
+  min-width: 40px;
+  text-align: center;
+}
+
+.stockInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stockTicker {
+  font-weight: 700;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.stockName {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.stockRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stockPrice {
+  font-weight: 600;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.badgeGreen {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.badgeRed {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ── Note ── */
+.note {
+  font-size: 12px;
+  color: #94a3b8;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+/* ══════════════════════════════════
+   TABLET  (max-width: 1024px)
+══════════════════════════════════ */
+@media (max-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stockPrice { display: none; }
+}
+
+/* ══════════════════════════════════
+   MOBILE  (max-width: 640px)
+══════════════════════════════════ */
+@media (max-width: 640px) {
+  .labelFull  { display: none; }
+  .labelShort { display: inline; }
+
+  .bestChange { display: none; }
+
+  .stockName { display: none; }
+
+  .statValue { font-size: 22px; }
+
+  .main { padding: 16px; }
+}

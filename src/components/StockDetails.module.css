@@ -1,0 +1,219 @@
+/* ── Layout ── */
+.wrapper {
+  min-height: 100vh;
+  background: #f1f5f9;
+  font-family: system-ui, 'Segoe UI', sans-serif;
+}
+
+.main {
+  padding: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* ── Breadcrumb ── */
+.breadcrumb {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0 0 16px;
+}
+
+.breadcrumbLink {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.breadcrumbLink:hover {
+  text-decoration: underline;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tickerBadge {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+  min-width: 56px;
+  text-align: center;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.meta {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.watchBtn,
+.watchBtnActive {
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.watchBtn {
+  background: #fff;
+  border: 1.5px solid #2563eb;
+  color: #2563eb;
+}
+
+.watchBtn:hover {
+  background: #eff6ff;
+}
+
+.watchBtnActive {
+  background: #fff;
+  border: 1.5px solid #dc2626;
+  color: #dc2626;
+}
+
+.watchBtnActive:hover {
+  background: #fef2f2;
+}
+
+/* ── Price Block ── */
+.priceBlock {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.changeBadge {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.green {
+  color: #16a34a;
+  background: #dcfce7;
+}
+
+.red {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+/* ── Stats Grid ── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.statCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.statValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* ── Note ── */
+.note {
+  font-size: 12px;
+  color: #94a3b8;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+/* ── Not Found ── */
+.notFound {
+  font-size: 15px;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.backBtn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.backBtn:hover {
+  background: #1d4ed8;
+}
+
+/* ══════════════════════════════════
+   TABLET  (max-width: 1024px)
+══════════════════════════════════ */
+@media (max-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ══════════════════════════════════
+   MOBILE  (max-width: 640px)
+══════════════════════════════════ */
+@media (max-width: 640px) {
+  .main { padding: 16px; }
+
+  .price { font-size: 26px; }
+
+  .watchBtn,
+  .watchBtnActive {
+    width: 100%;
+    text-align: center;
+  }
+}
